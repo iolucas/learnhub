@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app="learnhubApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>LearnHub</title>
+    </head>
+    <body ng-controller="CourseController">
+        <div ng-repeat="course in courses track by $index">{{course.title}}</div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+    </body>
+</html>
