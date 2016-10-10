@@ -5,6 +5,8 @@ angular.module('learnhubApp.controllers', []).
 
             //Must save the csv again with utf8 format otherwise, an encoding bug happens
             keep working on learnhub mvp
+            -just join online courses on a single place with simple filters
+            -must find a way to measure its validation, not only traffic
 
             var csvData = CSVToArray(response.data, ",");
             //Create course object
