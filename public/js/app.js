@@ -1,3 +1,4 @@
 angular.module('learnhubApp', [
-    'learnhubApp.controllers'
+    'learnhubApp.controllers',
+    'ngMaterial'
 ]);

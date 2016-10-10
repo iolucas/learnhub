@@ -1,27 +1,42 @@
 angular.module('learnhubApp.controllers', []).
     controller('CourseController', function($scope, $http) {
 
+        $scope.courseFreeFilter = "";
+
         $http.get("allcourses2.csv").then(function(response){
 
             //Must save the csv again with utf8 format otherwise, an encoding bug happens
-            keep working on learnhub mvp
-            -just join online courses on a single place with simple filters
-            -must find a way to measure its validation, not only traffic
+            //keep working on learnhub mvp
+            //-must find a way to measure its validation, not only traffic
 
             var csvData = CSVToArray(response.data, ",");
             //Create course object
             var courseObjs = [];
 
+            //Fill course sites
+            var courseSites = [];
+
             for (var i = 1; i < csvData.length; i++) {
                 var csv = csvData[i];
+                
+                //If the row is invalid, clear it
+                if(csv[1] == undefined)
+                    continue;
+                    
                 courseObjs.push({
                     title: csv[0],
                     site: csv[1],
                     free: csv[2]
-                });              
+                });
+
+                //If the site is not in the course sites, put it
+                if(courseSites.indexOf(csv[1]) == -1)
+                    courseSites.push(csv[1]);                  
             }
 
+
             $scope.courses = courseObjs;
+            $scope.courseSites = courseSites;            
         });
         
         /*$scope.courses = $http.get("allcourses.csv").then(function(response){
@@ -32,8 +47,6 @@ angular.module('learnhubApp.controllers', []).
                 "OI"
             ]
         });*/
-
-        $scope.courses = ["oi"];
 
         /*$scope.salary = 0;
         $scope.percentage = 0;

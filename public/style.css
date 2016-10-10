@@ -1,0 +1,70 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Calibri'
+}
+
+header {
+    background-color: #006064;
+    color: #84ffff;
+    height: 80px;
+    line-height: 80px;
+}
+
+header a {
+    color: #84ffff;
+    text-decoration: none;       
+}
+
+.user-area {
+    background-color: #aaa;
+    height: 50px;
+    line-height: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+.user-area a {
+    color: #111;
+    font-size: 30px;
+}
+
+#logo {
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+#user {
+    font-size: 20px;
+    margin-right: 20px;
+    float: right;
+}
+
+#user a {
+    color: inherit;
+}
+
+section {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.subject-reference {
+    background-color: #ddd;
+    padding-left: 5px;
+    margin: 5px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.course-data {
+    background-color: #ddd;
+    padding: 5px;
+    margin-bottom: 20px;
+}
